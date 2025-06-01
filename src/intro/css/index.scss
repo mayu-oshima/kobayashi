@@ -1,0 +1,181 @@
+@charset "UTF-8";
+@use '../../css/utils/mixin';
+
+/* /////////////////////////page_intro///////////////////////// */
+section p{
+  line-height: 1.7;
+}
+.byoinsyokai {
+  .sentence {
+    p {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.page_intro {
+  .nyuin {
+    margin-top: 70px;
+
+    h4 {
+      &:before {
+        font-family: FontAwesome;
+        content: "\f236";
+      }
+    }
+  }
+
+  .content {
+    h4 {
+      &:before {
+        color: #107539;
+        font-size: 2.5rem;
+        display: block;
+        margin-bottom: .5em;
+      }
+    }
+
+    p {
+      margin-bottom: 20px;
+
+      span {
+        display: block;
+        margin: 20px 0;
+      }
+    }
+
+    ul {
+      margin-bottom: 20px;
+
+      li {
+        margin-bottom: 10px;
+        line-height: 1.7;
+        list-style-type: disc;
+        margin-left: 21px;
+      }
+    }
+  }
+
+  .gairai {
+    margin-top: 70px;
+
+    h4 {
+      &:before {
+        font-family: FontAwesome;
+        content: "\f0f1";
+      }
+    }
+  }
+
+  .gaiyou {
+    margin-top: 70px;
+
+    table {
+      text-align: left;
+      border: 4px solid #e2e2e2;
+
+      th {
+        display: block;
+        width: 100%;
+        background-color: #d1ebdb;
+        padding: 17px;
+      }
+
+      td {
+        display: block;
+        width: 100%;
+        padding: 14px 17px;
+        line-height: 1.7;
+      }
+    }
+  }
+}
+
+@include mixin.pc {
+  section{
+    margin-bottom: 120px;
+  }
+  .about_byoinsyokai {
+    .sentence {
+      display: flex;
+      justify-content: space-between;
+
+      p {
+        width: 57%;
+      }
+
+      figure {
+        width: 40%;
+      }
+    }
+  }
+
+  .byoinsyokai {
+    .sentence {
+      margin-bottom: 70px;
+
+      p {
+        margin-bottom: 50px;
+      }
+    }
+  }
+
+  .wrap_nyuin_gairai {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 120px;
+  }
+
+  .page_intro {
+    .content {
+      width: 49%;
+
+      p {
+        margin-bottom: 30px;
+
+        span {
+          margin: 30px 0;
+        }
+      }
+
+      ul {
+        margin-bottom: 30px;
+
+        li {
+          margin-bottom: 15px;
+        }
+      }
+    }
+
+    .nyuin {
+      margin-top: 0;
+    }
+
+    .gairai {
+      margin-top: 0;
+    }
+
+    .gaiyou {
+      margin-top: 120px;
+
+      table {
+        tr {
+          border-bottom: 1px solid #e2e2e2;
+        }
+
+        th {
+          display: table-cell;
+          max-width: 20%;
+          text-align: center;
+          vertical-align: middle;
+        }
+
+        td {
+          display: table-cell;
+          width: 90%;
+          padding: 20px;
+        }
+      }
+    }
+  }
+}

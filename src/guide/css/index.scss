@@ -1,0 +1,50 @@
+@charset "UTF-8";
+@use '../../css/utils/mixin';
+
+
+/*////////////////////// page_guide ///////////////////////////////*/
+/* guide_nyuin */
+.guide_nyuin {
+  margin-top: 70px;
+
+  ul {
+    justify-content: space-between;
+
+    li {
+      width: 100%;
+      background-color: #f7f7f7;
+      box-shadow: 0 0 3px rgb(33 33 33 / 16%);
+      border-radius: 10px;
+      margin-top: 20px;
+      text-align: center;
+
+      a {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 17px;
+      }
+    }
+  }
+}
+
+
+@include mixin.pc {
+  .guide_nyuin {
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      li {
+        width: 48%;
+        margin-top: 40px;
+
+        &:nth-child(-n+2) {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,280 @@
+@charset "UTF-8";
+@use './utils/mixin';
+
+/* //////////////////////////////page_top //////////////////////////////*/
+.keyvis-swiper {
+  margin-bottom: 10px;
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: #107539;
+  }
+  &.swiper-cube .swiper-cube-shadow {
+    bottom: 10px;
+  }
+}
+
+/* ////wrap1//// */
+.wrap1 {
+  box-sizing: border-box;
+  margin-bottom: 70px;
+}
+
+.time {
+  margin-bottom: 70px;
+  padding: 22px !important;
+
+  .ttl_sec {
+    margin-bottom: 22px !important;
+  }
+
+  table {
+    border-collapse: separate;
+    border-spacing: 8px;
+
+    tr {
+      display: flex;
+      align-items: center;
+      + tr {
+        margin-top: 10px;
+      }
+    }
+
+    th {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 10px;
+      .tag {
+        background-color: #d1ebdb;
+        border-radius: 5px;
+        padding: 10px 10px;
+        color: #107539;
+        display: block;
+        min-width: 68px;
+      }
+    }
+
+    td {
+      text-align: left;
+      line-height: 1.7;
+
+      span {
+        color: #107539;
+      }
+    }
+  }
+}
+
+.contact {
+  p::before {
+    border: 1px solid #107539;
+    color: #107539;
+    padding: 10px;
+    font-size: 1.4rem;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+
+  .telnum {
+    font-size: 2.0rem;
+    margin-bottom: 30px;
+
+    &::before {
+      font-family: FontAwesome;
+      content: "\f095";
+    }
+  }
+
+  .link_contact {
+    &::before {
+      font-family: FontAwesome;
+      content: "\f0e0";
+    }
+  }
+}
+
+.link_contact a {
+  text-decoration: underline;
+  color: #107539;
+}
+
+/* guidance */
+.guidance {
+  margin-bottom: 70px;
+  font-weight: 400;
+
+  ul {
+    li {
+      font-size: 1.7rem;
+      text-align: center;
+      position: relative;
+      margin-bottom: 20px;
+
+      a {
+        display: block;
+        padding-left: 60px;
+        &::before {
+          position: absolute;
+          left: 30px;
+          color: #107539;
+        }
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.gairai_guidance a::before {
+  font-family: FontAwesome;
+  content: "\f0f1";
+}
+
+.nyuin_guidance a::before {
+  font-family: FontAwesome;
+  content: "\f236";
+}
+
+/* ////wrap1ここまで//// */
+
+/* news */
+.news {
+  margin-bottom: 70px;
+}
+
+.list_news {
+  height: 430px;
+  overflow-y: scroll;
+
+  .detail {
+    margin-bottom: 5px;
+
+    time {
+      margin-right: 10px;
+      line-height: 1;
+    }
+
+    span {
+      background-color: #364d82;
+      color: white;
+      padding: 3px 5px;
+    }
+  }
+
+  ul {
+    li {
+      padding: 15px;
+      border-bottom: 2px solid #e2e2e2;
+
+      h3 {
+        text-decoration: underline;
+        line-height: 1.7;
+        color: #107539;
+      }
+    }
+  }
+}
+
+/* strengths */
+.strengths {
+  font-weight: 400;
+
+  ul {
+    li {
+      font-size: 1.6rem;
+      margin-bottom: 30px;
+      line-height: 1.7;
+      padding-left: 25px;
+      position: relative;
+
+      &::before {
+        font-family: FontAwesome;
+        content: "\f058";
+        margin-right: 0.3em;
+        color: #107539;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+}
+
+/* PCメディアクエリ用 */
+@include mixin.pc {
+
+  .keyvis-swiper {
+    margin-bottom: 0;
+    &.swiper-cube .swiper-cube-shadow {
+      bottom: 0;
+    }
+  }
+
+
+  .wrap_time_news {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin-bottom: 120px;
+  }
+
+  .wrap1 {
+    margin: 0;
+    width: 40%;
+  }
+
+  .time {
+    padding: 42px !important;
+
+    .ttl_sec {
+      margin-bottom: 42px !important;
+    }
+  }
+
+  .wrap_guidance {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .guidance {
+    width: 100%;
+    margin-bottom: 0;
+
+    ul {
+      li {
+        font-size: 2.2rem;
+        a {
+          padding-left: 80px;
+         }
+
+        a::before {
+          left: 50px;
+        }
+      }
+    }
+  }
+
+  .news {
+    margin: 0;
+    width: 55%;
+  }
+
+  .list_news {
+    height: 500px;
+  }
+
+  .strengths {
+    margin: 0 auto;
+  }
+
+  .innner_strengths {
+    display: flex;
+    justify-content: space-between;
+
+    > div {
+      width: 49%;
+    }
+  }
+}

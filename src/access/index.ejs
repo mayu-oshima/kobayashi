@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<%- include('../_components/head', {
+  title: '交通案内',
+  keywords: '小林病院,宇都宮,病院,内科,外科,泌尿器科,整形外科,循環器科,交通案内,住所',
+  description: '宇都宮市西区の社会福祉法人 小林病院の交通アクセスの情報です。',
+  styles: [
+    '__BASE_URL__assets/access/css/index.css',
+  ],
+  scripts: [
+    
+  ]
+}) %>
+
+<body class="page_access">
+  <%- include('../_components/header',{
+    keyvis:{
+      sp: '__BASE_URL__assets/access/images/hd_main_01_sp.jpg',
+      pc: '__BASE_URL__assets/access/images/hd_main_01_pc.jpg'
+    }
+  }) %>
+
+  <main>
+    <div class="l_container">
+      <%- include('../_components/pankuzu', {
+        links: [
+          {
+            href: '__BASE_URL__',
+            text: 'ホーム'
+          },
+          {
+            href: 'current',
+            text: '交通案内'
+          },
+        ]
+      }) %>
+
+      <h2 class="page_title">交通案内</h2>
+
+      <div class="wrap bg_content">
+        <h3 class="ttl_sec">各種交通のご案内</h3>
+        <div class="inner_kotuguide">
+          <div class="">
+            <h4 class="fa_car">車でご来院の方</h4>
+            <p>中広通りの宇都宮西郵便局が目印。宇都宮西郵便局の交差点から東へ200メートル</p>
+          </div>
+          <div class="">
+            <h4 class="fa_train">電車でご来院の方</h4>
+            <p>JR宇都宮駅下車　徒歩2分</p>
+          </div>
+          <div class="">
+            <h4 class="fa_bus">バスでご来院の方</h4>
+            <p>宇都宮バス25号線　小林病院前下車　すぐ</p>
+          </div>
+        </div>
+        <div class="wrap_map">
+          <p>〒321-0222 栃木県西区西山町2番3号</p>
+          <p class="tel_access">tel.028-231-2310</p>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d172725.22881961716!2d139.71980219025951!3d36.44619980636812!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601f67a19107f92f%3A0xc20eeacb688a67fb!2z5a6H6YO95a6u6KiY5b-155eF6Zmi!5e0!3m2!1sja!2sjp!4v1656655710646!5m2!1sja!2sjp" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <div class="pagetop">
+        <p>Page Top</p>
+    </div>
+  </main>
+  <%- include('../_components/footer') %>
+</body>
+</html>

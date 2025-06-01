@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ja">
+<%- include('./_components/head', {
+  title: '受診案内',
+  keywords: '小林病院,宇都宮,病院,内科,外科,泌尿器科,整形外科,循環器科',
+  description: '宇都宮市西区にある社会福祉法人　小林病院は、内科・外科・整形外科・人工透析・泌尿器科・リハビリなど地域に密着した医療を提供致します。〒321-0222 栃木県西区西山町2番3号 TEL 028-231-2310',
+  styles: [
+    'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css',
+    '__BASE_URL__assets/css/index.css',
+  ],
+  scripts: [
+    'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js',
+    '__BASE_URL__assets/js/index.min.js'
+  ]
+}) %>
+
+<body>
+  <header class="page_top">
+    <%- include('./_components/header_info') %>
+
+    <div class="swiper keyvis-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="__BASE_URL__assets/images/index/keyvis/main_1.jpg" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img src="__BASE_URL__assets/images/index/keyvis/main_2.jpg" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img src="__BASE_URL__assets/images/index/keyvis/main_3.jpg" alt="" />
+        </div>
+      </div>
+
+      <!-- ナビゲーションボタン -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+
+    </div>
+    <%- include('./_components/header_nav') %>
+  </header>
+
+  <main>
+    <div class="wrap_time_news l_container">
+      <div class="wrap1">
+        <div class="time bg_content">
+          <h2 class="ttl_sec">診療時間</h2>
+          <table>
+            <tr>
+              <th><span class="tag">午前</span></th>
+              <td><span>9:00～13:00</span>（受付12:30まで）</td>
+            </tr>
+            <tr>
+              <th><span class="tag">午後</span></th>
+              <td><span>14:00～18:00</span>（受付17:30まで）</td>
+            </tr>
+            <tr>
+              <th><span class="tag">休診日</span></th>
+              <td>日曜日 / 祝祭日 / 土曜日午後</td>
+            </tr>
+          </table>
+        </div>
+        <div class="wrap_guidance">
+          <div class="guidance">
+            <ul>
+              <li class="gairai_guidance">
+                <a href="__BASE_URL__guide/#gairai_guide" class="bg_content">外来のご案内</a>
+              </li>
+              <li class="nyuin_guidance">
+                <a href="__BASE_URL__guide/#nyuin_guide" class="bg_content">入院のご案内</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="news bg_content">
+        <div class="head_news">
+          <h2 class="ttl_sec">お知らせ</h2>
+        </div>
+        <div class="list_news">
+          <% const newsItems = [
+            {
+              datetime: "2026-01-17",
+              displayDate: "2026.01.17",
+              href: "__BASE_URL__news/news.html",
+              title: "新型コロナウイルス感染症に伴うお知らせとお願い"
+            },
+            {
+              datetime: "2025-12-01",
+              displayDate: "2025.12.01",
+              href: "__BASE_URL__news/news.html",
+              title: "看護師（2026年3月卒業）正職員採用試験のお知らせ"
+            },
+            {
+              datetime: "2025-11-14",
+              displayDate: "2025.11.14",
+              href: "__BASE_URL__news/news.html",
+              title: "整形外科休診のおしらせ（12/8金曜日午前休診）"
+            },
+            {
+              datetime: "2025-11-14",
+              displayDate: "2025.11.14",
+              href: "__BASE_URL__news/news.html",
+              title: "インフルエンザ予防接種　予約受付開始しました"
+            },
+            {
+              datetime: "2025-11-14",
+              displayDate: "2025.11.14",
+              href: "__BASE_URL__news/news.html",
+              title: "新型コロナウイルス感染症対策"
+            },
+            {
+              datetime: "2025-11-14",
+              displayDate: "2025.11.14",
+              href: "__BASE_URL__news/news.html",
+              title: "発熱や風邪症状のあるかたの受診方法"
+            },
+            {
+              datetime: "2025-11-14",
+              displayDate: "2025.11.14",
+              href: "__BASE_URL__news/news.html",
+              title: "コロナワクチン3回目接種予約方法について"
+            }
+          ];
+          %>
+          <ul>
+            <% for(const item of newsItems) { %>
+              <li>
+                <article class="">
+                  <div class="detail">
+                    <time datetime="<%- item.datetime %>"><%- item.displayDate %></time>
+                  </div>
+                  <h3>
+                    <a href="<%- item.href %>">
+                      <%- item.title %>
+                    </a>
+                  </h3>
+                </article>
+              </li>
+            <% }; %>
+          </ul>        
+        </div>
+      </div>
+    </div>
+    <div class="strengths l_container bg_content">
+      <h2  class="ttl_sec">小林病院の強み</h2>
+      <div class="innner_strengths">
+        <div class="">
+          <ul>
+            <li>内科・泌尿器科から人工透析まで、幅広く対応しています</li>
+            <li>患者様を支えるチーム医療が強みです</li>
+            <li>在宅復帰を目指し、在宅生活を支えます</li>
+          </ul>
+        </div>
+        <div class="">
+          <img src="__BASE_URL__assets/images/index/syugou.jpg" alt="">
+        </div>
+      </div>
+    </div>
+
+    <%- include('./_components/treatment') %>
+
+    <div class="pagetop">
+        <p>Page Top</p>
+    </div>
+  </main>
+  <%- include('./_components/footer') %> 
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+<%- include('../_components/head', {
+  title: '病院紹介',
+  keywords: '小林病院,宇都宮,病院,内科,外科,泌尿器科,整形外科,循環器科,病院紹介',
+  description: '宇都宮市西区の社会福祉法人 小林病院の病院理念についてのご紹介です。',
+  styles: [
+    '__BASE_URL__assets/intro/css/index.css',
+  ],
+  scripts: [
+    
+  ]
+}) %>
+
+<body class="page_intro">
+  <%- include('../_components/header',{
+    keyvis:{
+      sp: '__BASE_URL__assets/intro/images/hd_main_01_sp.jpg',
+      pc: '__BASE_URL__assets/intro/images/hd_main_01_pc.jpg'
+    }
+  }) %>
+
+  <main>
+    <div class="l_container">
+      <%- include('../_components/pankuzu', {
+        links: [
+          {
+            href: '__BASE_URL__',
+            text: 'ホーム'
+          },
+          {
+            href: 'current',
+            text: '病院紹介'
+          },
+        ]
+      }) %>
+
+      <h2 class="page_title">病院紹介</h2>
+      <section class="byoinsyokai">
+        <div class="bg_content about_byoinsyokai">
+          <h3 class="ttl_sec">小林病院について</h3>
+          <div class="sentence">
+            <p>
+              栃木県西区西山町において、地域密着型ケアミックス病院として、高度な急性期医療を必要としない方や、在宅・社会復帰の困難な方、慢性期疾患の方の生活の質を向上のためリハビリ提供など、さまざまなケースでスムーズな入退院が可能になるよう、支援をしています。また在宅療養支援病院として、退院された後に外来受診困難な方等への在宅医療も、積極的に行っています。
+            </p>
+            <figure>
+              <img src="__BASE_URL__assets/intro/images/gaikan.jpg" alt="">
+            </figure>
+          </div>
+        </div>
+
+        <div class="wrap_nyuin_gairai">
+          <div class="nyuin content bg_content" id="nyuin_intro">
+            <h4 class="ttl_sec">入 院</h4>
+            <p>
+              <strong>主に透析を含む一般内科や慢性期医療を行っています。</strong>
+            </p>
+            <ul>
+              <li>内科：肺炎、喘息、心不全、脱水、腎機能悪化、褥瘡、糖尿病　など</li>
+              <li>外科：痔核手術、排膿処置、胃瘻造設　など</li>
+              <li>
+                その他：泌尿器科的検査・治療、圧迫骨折などに対するADL改善、嚥下困難の機能改善　など
+              </li>
+            </ul>
+            <p>
+              特に、患者さんとご家族が、これからどのように過ごしたいかを大切にし、そのために、嚥下も含む身体的なリハビリや栄養状態を改善させること、在宅に帰るための環境を整えることに力を入れています。<br>
+              当院では対応できない手術や緊急処置が必要な方は、基幹病院と連携を取り対応しています。
+            </p>
+          </div>
+
+          <div class="gairai content bg_content" id="gairai_intro">
+            <h4 class="ttl_sec">外 来</h4>
+            <p>
+              <strong>外来では、内科、腎臓内科、外科、泌尿器科を中心として、診療を行っています。</strong>
+            </p>
+            <p>
+              さらに、整形外科、循環器科、総合診療科を持ち、身近な場所で皆様の要望に応えることができる、
+              <span>“悪くなったら気軽に治療して帰れる病院”</span>
+              でありたいと思っています。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div class="gaiyou bg_content">
+        <h3 class="ttl_sec">病院概要</h3>
+        <table>
+          <tr>
+            <th>名称</th>
+            <td>社会福祉法人　小林病院</td>
+          </tr>
+          <tr>
+            <th>住所</th>
+            <td>〒321-0222　栃木県西区西山町2番3号</td>
+          </tr>
+          <tr>
+            <th>電話</th>
+            <td>028-231-2310</td>
+          </tr>
+          <tr>
+            <th>開設年月</th>
+            <td>1980年5月</td>
+          </tr>
+          <tr>
+            <th>病院長</th>
+            <td>小林良治</td>
+          </tr>
+          <tr>
+            <th>診療科目</th>
+            <td>
+              内科/外科/肛門科/泌尿器科/血液内科/循環器科/整形外科/総合診療科/人工透析内科/胃腸科/放射線科/リハビリテーション科/喫煙外来/頭痛外来
+            </td>
+          </tr>
+
+        </table>
+      </div>
+    </div>
+
+    <div class="pagetop">
+        <p>Page Top</p>
+    </div>
+  </main>
+  <%- include('../_components/footer') %> 
+</body>
+</html>

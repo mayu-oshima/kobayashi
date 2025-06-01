@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<%- include('../_components/head', {
+  title: 'お知らせ',
+  keywords: '小林病院,宇都宮,病院,内科,外科,泌尿器科,整形外科,循環器科,お知らせ',
+  description: '宇都宮市西区の社会福祉法人 小林病院からのお知らせです。',
+  styles: [
+    '__BASE_URL__assets/news/css/index.css',
+  ],
+  scripts: [
+    
+  ]
+}) %>
+
+<body class="page_news">
+  <%- include('../_components/header',{
+    keyvis:{
+      sp: '__BASE_URL__assets/news/images/hd_main_01_sp.jpg',
+      pc: '__BASE_URL__assets/news/images/hd_main_01_pc.jpg'
+    }
+  }) %>
+
+  <main>
+    <div class="l_container">
+      <%- include('../_components/pankuzu', {
+        links: [
+          {
+            href: '__BASE_URL__',
+            text: 'ホーム'
+          },
+          {
+            href: 'current',
+            text: '〇〇についてのお知らせ'
+          },
+        ]
+      }) %>
+
+      <h2 class="page_title">〇〇についてのお知らせ</h2>
+      <section class="">
+        <div class="bg_content ">
+          <h3 class="ttl_sec">〇〇について</h3>
+          <div class="sentence">
+            <p class="text">
+              テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキス<br>
+              テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+            </p>
+            <p class="text">
+              テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキス<br>
+              テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+            </p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <div class="pagetop">
+        <p>Page Top</p>
+    </div>
+  </main>
+  <%- include('../_components/footer') %> 
+</body>
+</html>

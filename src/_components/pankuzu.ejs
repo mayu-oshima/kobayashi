@@ -1,0 +1,14 @@
+<%# 現在のページのhrefには'current'と入力 %>
+<div class="pankuzu l_container">
+  <ul class="flex">
+    <% for(const link of links) { %>
+    <li>
+      <% if(link.href !== 'current') { %>
+      <a href="<%- link.href %>"><%- link.text %></a>
+      <% } else { %>
+        <%- link.text %>
+      <% } %>
+    </li>
+    <% } %>
+  </ul>
+</div>

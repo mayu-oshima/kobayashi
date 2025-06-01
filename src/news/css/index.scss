@@ -1,0 +1,16 @@
+@use '../../css/utils/mixin';
+
+.text {
+  line-height: 1.7;
+  & + .text {
+    margin-top: 20px;
+  }
+}
+
+@include mixin.pc {
+  .text {
+    & + .text {
+      margin-top: 40px;
+    }
+  }
+}

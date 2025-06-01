@@ -1,0 +1,19 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%- title %>｜社会福祉法人　小林病院</title>
+  <meta name="keywords" content="<%- keywords %>">
+  <meta name="description" content="<%- description %>">
+  <link rel="icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="__BASE_URL__assets/css/reset.css">
+  <link rel="stylesheet" href="__BASE_URL__assets/css/common.css">
+  <% for(const item of styles) { %>
+  <link rel="stylesheet" href="<%- item %>">
+  <% } %>
+  <script src="https://kit.fontawesome.com/5cb8774097.js" crossorigin="anonymous"></script>
+  <script src="__BASE_URL__assets/js/common.min.js" defer></script>
+  <% for(const item of scripts) { %>
+  <script src="<%- item %>" defer></script>
+  <% } %>
+</head>

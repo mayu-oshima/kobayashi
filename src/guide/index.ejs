@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<%- include('../_components/head', {
+  title: '受診案内',
+  keywords: '小林病院,宇都宮,病院,内科,外科,泌尿器科,整形外科,循環器科,受診案内',
+  description: '宇都宮市西区の社会福祉法人 小林病院の受診のご案内です。',
+  styles: [
+    '__BASE_URL__assets/guide/css/index.css',
+  ],
+  scripts: [
+    
+  ]
+}) %>
+
+
+<body class="page_guide">
+  <%- include('../_components/header',{
+    keyvis:{
+      sp: '__BASE_URL__assets/guide/images/hd_main_01_sp.jpg',
+      pc: '__BASE_URL__assets/guide/images/hd_main_01_pc.jpg'
+    }
+  }) %>
+
+  <main>
+    <div class="l_container">
+      <%- include('../_components/pankuzu', {
+        links: [
+          {
+            href: '__BASE_URL__',
+            text: 'ホーム'
+          },
+          {
+            href: 'current',
+            text: '受診案内'
+          },
+        ]
+      }) %>
+
+      <h2 class="page_title">受診案内</h2>
+      <%- include('../_components/treatment') %>
+
+      <div class="guide_nyuin bg_content" id="nyuin_guide">
+        <h3 class="ttl_sec">入院のご案内</h3>
+        <ul>
+          <li>
+            <a href="__BASE_URL__intro/#nyuin_intro">入院手続きについて</a>
+          </li>
+          <li>
+            <a href="__BASE_URL__intro/#nyuin_intro">病室について</a>
+          </li>
+          <li>
+            <a href="__BASE_URL__intro/#nyuin_intro">ご面会について</a>
+          </li>
+          <li>
+            <a href="__BASE_URL__intro/#nyuin_intro">入院生活について</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pagetop">
+        <p>Page Top</p>
+    </div>
+  </main>
+  <%- include('../_components/footer') %>
+</body>
+</html>

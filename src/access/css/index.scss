@@ -1,0 +1,127 @@
+@charset "UTF-8";
+@use '../../css/utils/mixin';
+
+/* /////////////////////////page_access/////////////////////////// */
+.page_access {
+  .wrap {
+    >div {
+      margin-bottom: 30px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    h4 {
+      &:before {
+        margin-right: .3em;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        translate: 0 -50%;
+      }
+      margin-bottom: 10px;
+      font-size: 2rem;
+      color: #107539;
+      padding-left: 30px;
+      position: relative;
+    }
+
+    p {
+      line-height: 1.7;
+    }
+
+    >p {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.inner_kotuguide {
+  >div {
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.fa_car {
+  &:before {
+    font-family: fontawesome;
+    content: "\f1b9";
+  }
+}
+
+.fa_train {
+  &:before {
+    font-family: fontawesome;
+    content: "\f238";
+  }
+}
+
+.fa_bus {
+  &:before {
+    font-family: fontawesome;
+    content: "\f207";
+  }
+}
+
+.wrap_map {
+  margin-top: 40px;
+
+  iframe {
+    margin-top: 10px;
+  }
+}
+
+.tel_access {
+  color: #107539;
+  font-size: 1.8rem;
+  margin-top: 10px;
+}
+
+@include mixin.pc {
+  .page_access {
+    .wrap {
+      padding: 30px;
+
+      >div {
+        margin-bottom: 30px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      h4 {
+        margin-bottom: 20px;
+        font-size: 2.2rem;
+      }
+
+      >p {
+        margin-bottom: 30px;
+      }
+
+      >ul {
+        margin-bottom: 30px;
+        margin-left: 1.4em;
+      }
+    }
+  }
+
+  .inner_kotuguide {
+    display: flex;
+    justify-content: space-between;
+
+    >div {
+      width: 30%;
+      margin-bottom: 0;
+    }
+  }
+
+  .tel_access {
+    font-size: 1.8rem;
+  }
+}
